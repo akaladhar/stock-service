@@ -17,7 +17,7 @@ public class IndexServiceImpl implements IndexService {
 		
 		Collection<Double> prices = store.getStockPrices();
 		double totalPrice = prices.stream().reduce(0.0, (x,y) -> x + y);
-		
+		System.out.println("test 123");
 		return Math.pow(totalPrice, 1.0/ prices.size());
 	}
 
